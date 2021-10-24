@@ -28,10 +28,14 @@ app.use(cors());
 // Api root
 const userRoute = require('./routes/student.routes')
 app.use('/api', userRoute)
+const imageRoute = require('./routes/image.routes')
+app.use('/api', imageRoute)
+
+//static path
+app.use('/public',express.static('./public'))
 
 // Create port
-const { API_PORT } = process.env;
-const port = API_PORT || 8080;
+const port = 8080;
 
 // Conectting port
 const server = app.listen(port, () => {
