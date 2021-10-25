@@ -1,7 +1,6 @@
 const Freeze = require("../frozen/frozenObjects")
 const Bcrypt = require("bcryptjs");
 const StudentSchema = require('../models/student.model');
-const generateToken = require("../helpers/jwt.helper");
 const jwt = require('jsonwebtoken');
 // const saltRounds = 10;
 exports.findAll = (req, res) => {
