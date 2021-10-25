@@ -4,7 +4,8 @@ mongoose = require('mongoose'),
 cors = require('cors'),
 bodyParser = require('body-parser'),
 dbConfig = require('./db/database');
-
+const morgan = require('morgan');
+const fs = require('fs');
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
@@ -25,14 +26,17 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 
+//logger
+var accessLog = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+app.use(morgan('combined',{
+    skip: function (req, res) { return res.statusCode < 400 }
+  }));
+  app.use(morgan('combined',{stream: accessLog}));
 // Api root
 const userRoute = require('./routes/student.routes')
 app.use('/api', userRoute)
 const imageRoute = require('./routes/image.routes')
 app.use('/api', imageRoute)
-
-//static path
-app.use('/public',express.static('./public'))
 
 // Create port
 const port = 8080;
@@ -61,3 +65,5 @@ app.use(function (err, req, res, next) {
 
 // Static build location
 app.use(express.static(path.join(__dirname, 'dist')));
+//static path
+app.use('/public',express.static('./public'))
