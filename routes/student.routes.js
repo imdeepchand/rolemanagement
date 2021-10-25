@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+// const morgan = require('morgan');
 const {findAll, createOne, findOne, updateOne, deleteOne, deleteAll, Login} = require("../controllers/student.controller");
 const auth = require("../helpers/jwt.helper");
 // Express route
@@ -18,6 +19,7 @@ studentRouter.post('/remove-student/:id',auth,deleteOne);
 // Delete All student
 studentRouter.post('/remove-student',auth,deleteAll);
 //Login request
+// studentRouter.post('/login',morgan('combined'),Login);
 studentRouter.post('/login',Login);
 
 module.exports = studentRouter;

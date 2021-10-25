@@ -9,7 +9,7 @@ exports.store = (req, res, next)=>{
         if (error) {
             return next(error)
         } else {
-            res.status(201).json(data)
+            res.status(201).json({ msg: "successfully uploaded!"})
         }
     })
 }

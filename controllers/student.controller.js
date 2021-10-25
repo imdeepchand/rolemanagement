@@ -29,7 +29,7 @@ exports.createOne = async (req, res, next) => {
                 if (error) {
                     return next(error)
                 } else {
-                    res.status(201).json(data)
+                    res.status(201).json({msg: "Create successfully"})
                 }
             })
         } else {
@@ -96,14 +96,14 @@ exports.Login = async (req,res, next) => {
         data.token = token 
       });
     if(user.length === 0){
-        res.status(401).send("Wrong username or Password");
+        res.status(401).json({msg: "Wrong username or Password"});
     }
     else {
     const cmp = await Bcrypt.compare(req.body.password, user[0].password);
         if(cmp){
-            res.status(200).json({ data: data, msg: "login successfully" })
+            res.status(200).json({ msg: "login successfully" })
         } else {
-            res.status(401).send("Wrong username or Password");
+            res.status(401).json({msg: "Wrong username or Password"});
         }
     }
 }
