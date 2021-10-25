@@ -28,10 +28,8 @@ app.use(cors());
 
 //logger
 var accessLog = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
-app.use(morgan('combined',{
-    skip: function (req, res) { return res.statusCode < 400 }
-  }));
-  app.use(morgan('combined',{stream: accessLog}));
+var skipLog = function (req, res) { return res.statusCode < 400 };
+app.use(morgan('combined',{skip: skipLog,stream: accessLog}));
 // Api root
 const userRoute = require('./routes/student.routes')
 app.use('/api', userRoute)
