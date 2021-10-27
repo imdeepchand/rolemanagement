@@ -54,3 +54,27 @@ exports.updateById = (req, res) => {
         }
     })
 }
+
+exports.deleteById = (req,res) => {
+    const where = {_id: new ObjectId(req.params.id)}
+    imageSchema.findOne(where,(error, data) => {
+        if(error) console.log(error)
+        else {
+            const PathImg = data.image
+            const nPath = PathImg.split('http://localhost:8080/public');
+            let NewPath = `${Public}${nPath[1]}`;
+            fs.unlink(NewPath,function(error) {
+                if(error) console.log(error)
+                else {
+                    imageSchema.findByIdAndRemove(where,(error, data) => {
+                        if (error) {
+                            return next(error);
+                        } else {
+                            res.status(301).json({msg: "successfully deleted!"})
+                        }
+                    })
+                }
+            })
+        }
+    })
+}
