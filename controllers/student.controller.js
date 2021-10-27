@@ -100,7 +100,7 @@ exports.Login = async (req,res, next) => {
     else {
     const cmp = await Bcrypt.compare(req.body.password, user[0].password);
         if(cmp){
-            res.status(200).json({ msg: "login successfully" })
+            res.status(200).json({data:data, msg: "login successfully" })
         } else {
             res.status(401).json({msg: "Wrong username or Password"});
         }
