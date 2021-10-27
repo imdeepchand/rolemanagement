@@ -35,6 +35,10 @@ const userRoute = require('./routes/student.routes')
 app.use('/api', userRoute)
 const imageRoute = require('./routes/image.routes')
 app.use('/api', imageRoute)
+// Static build location
+app.use(express.static(path.join(__dirname, 'dist')));
+//static path
+app.use('/public',express.static(path.join(__dirname, 'public')));
 
 // Create port
 const port = 8080;
@@ -60,8 +64,3 @@ app.use(function (err, req, res, next) {
     if (!err.statusCode) err.statusCode = 500;
     res.status(err.statusCode).send(err.message);
 });
-
-// Static build location
-app.use(express.static(path.join(__dirname, 'dist')));
-//static path
-app.use('/public',express.static('./public'))
