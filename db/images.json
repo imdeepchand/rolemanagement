@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "61797fe0bb96d1d4e646fc34"
+  },
+  "image": "http://localhost:8080/public/image/d4394886-482a-4767-b532-9ae1f140aa30image.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6179825cca6624298e34b807"
+  },
+  "image": "http://localhost:8080/public/image/0d8410d5-3d4e-4aeb-aaf3-86936d17ba45image.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6179825eca6624298e34b809"
+  },
+  "image": "http://localhost:8080/public/image/72b059d3-5def-4f5f-9d00-e021014f8e9eimage.png",
+  "__v": 0
+}]
