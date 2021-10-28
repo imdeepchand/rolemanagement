@@ -3,12 +3,12 @@ path = require('path'),
 mongoose = require('mongoose'),
 cors = require('cors'),
 bodyParser = require('body-parser'),
-dbConfig = require('./db/database');
+{config} = require('./config/config');
 const morgan = require('morgan');
 const fs = require('fs');
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
+mongoose.connect(config.db, {
     useNewUrlParser: true
 }).then(() => {
         console.log('Database connected')
