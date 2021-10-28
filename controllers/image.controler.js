@@ -2,7 +2,6 @@ const { config } = require("../config/config");
 const imageSchema = require("../models/image.model");
 const { ObjectId } = require("mongodb");
 const unlinkImage = require("../midelware/fs.midelware");
-
 exports.store = (req, res, next) => {
   imageSchema.create(
     {

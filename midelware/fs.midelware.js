@@ -12,5 +12,4 @@ const unlinkImage = (Path) => {
         }
     })
 }
-
 module.exports = unlinkImage;
