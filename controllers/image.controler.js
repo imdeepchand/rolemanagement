@@ -1,7 +1,6 @@
 const { config } = require("../config/config");
 const imageSchema = require("../models/image.model");
 const { ObjectId } = require("mongodb");
-const unlinkImage = require("../midelware/fs.midelware");
 exports.store = (req, res, next) => {
   imageSchema.create(
     {
@@ -31,10 +30,6 @@ exports.getImage = (req, res, next) => {
 
 exports.updateById = (req, res) => {
   const where = { _id: new ObjectId(req.params.id) };
-  imageSchema.findOne(where, (error, data) => {
-    if (error) console.log(error);
-    else {
-      unlinkImage(data.image);
       imageSchema.findByIdAndUpdate(
         where,
         {
@@ -50,23 +45,15 @@ exports.updateById = (req, res) => {
           }
         }
       );
-    }
-  });
 };
 
 exports.deleteById = (req, res) => {
   const where = { _id: new ObjectId(req.params.id) };
-  imageSchema.findOne(where, (error, data) => {
-    if (error) console.log(error);
-    else {
-      unlinkImage(data.image);
-      imageSchema.findByIdAndRemove(where, (error, data) => {
-        if (error) {
-          return next(error);
-        } else {
-          res.status(301).json({ msg: "successfully deleted!" });
-        }
-      });
+  imageSchema.findByIdAndRemove(where, (error, data) => {
+    if (error) {
+      return next(error);
+    } else {
+      res.status(301).json({ msg: "successfully deleted!" });
     }
   });
 };
