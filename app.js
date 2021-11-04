@@ -31,10 +31,10 @@ var accessLog = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags
 var skipLog = function (req, res) { return res.statusCode < 400 };
 app.use(morgan('combined',{skip: skipLog,stream: accessLog}));
 // Api root
-const userRoute = require('./routes/student.routes')
-app.use('/api', userRoute)
-const imageRoute = require('./routes/image.routes')
-app.use('/api', imageRoute)
+const userRoute = require('./routes/users.routes');
+app.use('/api', userRoute);
+const imageRoute = require('./routes/image.routes');
+app.use('/api', imageRoute);
 // Static build location
 app.use(express.static(path.join(__dirname, 'dist')));
 //static path
