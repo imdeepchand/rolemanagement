@@ -6,7 +6,6 @@ const {RFC} = require('../frozen/msgAndStatusCode');
 const Public = "../../restFull-API/public";
 
 const unlinkImage = (req, res, next) => {
-    console.log(req.params)
   const where = { _id: new ObjectId(req.params.id) };
   imageSchema.findOne(where, (error, data) => {
     if (error) console.log(error);

@@ -106,4 +106,13 @@
   "email": "rey@gmail.com",
   "password": "$2a$10$cq6p2Rg3RF4mltkBw3RhkenwcT/5BlYBE8wtVW05xvNuEUmUXlPs.",
   "__v": 0
+},{
+  "_id": {
+    "$oid": "617e9af0d499f8c09b81340f"
+  },
+  "name": "sky1",
+  "role": "user",
+  "email": "sky1@gmail.com",
+  "password": "$2a$10$ah47SgbJTO1xaUmjl66Gkeu3zYGoKkExWFQkf9lujx6knZuVdNWUy",
+  "__v": 0
 }]
