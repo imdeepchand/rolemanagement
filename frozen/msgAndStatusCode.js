@@ -1,26 +1,26 @@
 // Http response
 exports.RFC = {
-    // OK
-    H200 : 200,
-    // Created
-    H201 : 201,
-    // Not Found
-    H302 : 302,
-    //Unauthorize
-    H401 : 401,
-    // Not Found
-    H404 : 404,
-    // Forbidden
-    H403 : 403,
-    // Conflict
-    H409 : 409,
-    // Precondition Failed
-    H412 : 412,
-    // Unsupported media type
-    H415 : 415,
-    // Internal Server Error
-    H500 : 500,
-}
+  // OK
+  H200: 200,
+  // Created
+  H201: 201,
+  // Not Found
+  H302: 302,
+  //Unauthorize
+  H401: 401,
+  // Not Found
+  H404: 404,
+  // Forbidden
+  H403: 403,
+  // Conflict
+  H409: 409,
+  // Precondition Failed
+  H412: 412,
+  // Unsupported media type
+  H415: 415,
+  // Internal Server Error
+  H500: 500,
+};
 
 // Success Messages
 exports.CREATED = "Created successfully!";

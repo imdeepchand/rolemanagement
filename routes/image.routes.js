@@ -7,8 +7,8 @@ const {
   updateById,
   deleteById,
 } = require("../controllers/image.controler");
-const { uploadImg } = require("../midelware/upload.midel");
-const unlinkImage = require("../midelware/fs.midelware");
+const { uploadImg } = require("../middleware/upload.middleware");
+const unlinkImage = require("../middleware/fs.middleware");
 // Express route
 const imageRouter = express.Router();
 

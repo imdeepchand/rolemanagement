@@ -2,7 +2,7 @@ const { response } = require("express");
 const imageSchema = require("../models/image.model");
 const { ObjectId } = require("mongodb");
 const fs = require("fs");
-const {RFC} = require('../frozen/msgAndStatusCode');
+const { RFC } = require("../frozen/msgAndStatusCode");
 const Public = "../../restFull-API/public";
 
 const unlinkImage = (req, res, next) => {

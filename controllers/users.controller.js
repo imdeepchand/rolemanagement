@@ -1,14 +1,21 @@
 const Freeze = require("../frozen/frozenObjects");
 const Bcrypt = require("bcryptjs");
 const userSchema = require("../models/users.model");
-const {RFC, CREATED, UPDATED, DATA_FOUND, DELETE_DATA, ALREADY} = require('../frozen/msgAndStatusCode');
+const {
+  RFC,
+  CREATED,
+  UPDATED,
+  DATA_FOUND,
+  DELETE_DATA,
+  ALREADY,
+} = require("../frozen/msgAndStatusCode");
 exports.findAll = (req, res) => {
   const where = { role: Freeze.USER };
   userSchema.find(where, (error, data) => {
     if (error) {
       return next(error);
     } else {
-      res.status(RFC.H302).json({data: data, msg: DATA_FOUND});
+      res.status(RFC.H302).json({ data: data, msg: DATA_FOUND });
     }
   });
 };
@@ -62,7 +69,7 @@ exports.updateOne = (req, res, next) => {
       if (error) {
         return next(error);
       } else {
-        res.json({msg: UPDATED});
+        res.json({ msg: UPDATED });
       }
     }
   );

@@ -32,9 +32,18 @@
 			"name": "show-recoards",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNjAyNDU4OSwiZXhwIjoxNjM2MDMxNzg5fQ.2EAys9p-fwCoR0WeAXyjReoagzUMmDdo5RUraSVAF50",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "{{host}}user-recoard",
+					"host": [
+						"{{host}}user-recoard"
+					]
 				}
 			},
 			"response": []
@@ -46,10 +55,16 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNjAyNDU4OSwiZXhwIjoxNjM2MDMxNzg5fQ.2EAys9p-fwCoR0WeAXyjReoagzUMmDdo5RUraSVAF50",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"neha\",\r\n    \"email\":\"neha@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"name\": \"sky1\",\r\n    \"email\":\"sky01@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -57,9 +72,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}update-student/:id",
+					"raw": "{{host}}update-user/:id",
 					"host": [
-						"{{host}}update-student"
+						"{{host}}update-user"
 					],
 					"path": [
 						":id"
@@ -67,7 +82,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "613df8470eea992d9875f020"
+							"value": "617e9af0d499f8c09b81340f"
 						}
 					]
 				}
@@ -78,11 +93,17 @@
 			"name": "remove-recoard",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNjAyNDU4OSwiZXhwIjoxNjM2MDMxNzg5fQ.2EAys9p-fwCoR0WeAXyjReoagzUMmDdo5RUraSVAF50",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{host}}remove-student/:id",
+					"raw": "{{host}}remove-user/:id",
 					"host": [
-						"{{host}}remove-student"
+						"{{host}}remove-user"
 					],
 					"path": [
 						":id"
@@ -101,11 +122,17 @@
 			"name": "find-recoard-by-id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNjAyNDU4OSwiZXhwIjoxNjM2MDMxNzg5fQ.2EAys9p-fwCoR0WeAXyjReoagzUMmDdo5RUraSVAF50",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{host}}get-student/:id",
+					"raw": "{{host}}get-user/:id",
 					"host": [
-						"{{host}}get-student"
+						"{{host}}get-user"
 					],
 					"path": [
 						":id"
@@ -113,7 +140,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "613df8470eea992d9875f020"
+							"value": "617e9af0d499f8c09b81340f"
 						}
 					]
 				}
@@ -124,11 +151,17 @@
 			"name": "remove-all",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNjAyNDU4OSwiZXhwIjoxNjM2MDMxNzg5fQ.2EAys9p-fwCoR0WeAXyjReoagzUMmDdo5RUraSVAF50",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{host}}remove-student",
+					"raw": "{{host}}remove-user",
 					"host": [
-						"{{host}}remove-student"
+						"{{host}}remove-user"
 					]
 				}
 			},
@@ -164,7 +197,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTM1MjUyMiwiZXhwIjoxNjM1MzU5NzIyfQ.BsQvBKwynJHV_N6jQRuHY4Fn40nZz7NpJLOyq-hEcbo",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTY3Njc4OCwiZXhwIjoxNjM1NjgzOTg4fQ.wsChbHu7MSKzAMQyXzj-ViD2r9RM8HRJdfQ3UmsZfTI",
 						"type": "text"
 					}
 				],
@@ -194,7 +227,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTI5ODU1MywiZXhwIjoxNjM1MzA1NzUzfQ.CQ9bOfUmFZVFxKUVVJNy_o0oIxHxk24pCS10eSOBwTI",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTY3Njc4OCwiZXhwIjoxNjM1NjgzOTg4fQ.wsChbHu7MSKzAMQyXzj-ViD2r9RM8HRJdfQ3UmsZfTI",
 						"type": "text"
 					}
 				],
@@ -214,7 +247,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTI5ODU1MywiZXhwIjoxNjM1MzA1NzUzfQ.CQ9bOfUmFZVFxKUVVJNy_o0oIxHxk24pCS10eSOBwTI",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTY3Njc4OCwiZXhwIjoxNjM1NjgzOTg4fQ.wsChbHu7MSKzAMQyXzj-ViD2r9RM8HRJdfQ3UmsZfTI",
 						"type": "text"
 					}
 				],
@@ -234,6 +267,42 @@
 					}
 				},
 				"url": {
+					"raw": "{{host}}update/:id",
+					"host": [
+						"{{host}}update"
+					],
+					"path": [
+						":id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "617e78807f55883ecdc11425",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "617e78807f55883ecdc11425"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-by-id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJfaWQiOiI2MTc0ZjFjMWZkM2NiYzRkODI4MjRiNWUiLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJHlaU0ZIYmJhOVdwZ1R1QlVOTUhzRE9kYVE1d3Jnc3l6UXZwSElRdnBiVGUzak05T3VwVmVDIiwiX192IjowfV0sImlhdCI6MTYzNTY3Njc4OCwiZXhwIjoxNjM1NjgzOTg4fQ.wsChbHu7MSKzAMQyXzj-ViD2r9RM8HRJdfQ3UmsZfTI",
+						"type": "text"
+					}
+				],
+				"url": {
 					"raw": "{{host}}delete/:id",
 					"host": [
 						"{{host}}delete"
@@ -243,15 +312,15 @@
 					],
 					"query": [
 						{
-							"key": "id",
-							"value": "6178b42b2a47dfb15bf4cbdb",
+							"key": "",
+							"value": null,
 							"disabled": true
 						}
 					],
 					"variable": [
 						{
 							"key": "id",
-							"value": "6178b42b2a47dfb15bf4cbdb"
+							"value": "61797fe0bb96d1d4e646fc34"
 						}
 					]
 				}
