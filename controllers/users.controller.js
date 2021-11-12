@@ -41,7 +41,7 @@ exports.createOne = async (req, res, next) => {
         }
       );
     } else {
-      res.status(RFC.H302).json({
+      res.status(RFC.H200).json({
         data: data,
         msg: ALREADY,
       });

@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname, "dist")));
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Create port
-const port = 8080;
+const port = 5000;
 
 // Conectting port
 const server = app.listen(port, () => {
