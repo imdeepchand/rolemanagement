@@ -14,7 +14,7 @@ mongoose
   })
   .then(
     () => {
-      console.log("Database connected");
+      console.log("Mongodb Connected!");
     },
     (error) => {
       console.log("Database could not be connected : " + error);
@@ -39,6 +39,7 @@ var skipLog = function (req, res) {
   return res.statusCode < 400;
 };
 app.use(morgan("combined", { skip: skipLog, stream: accessLog }));
+app.use(morgan("tiny"));
 // Api root
 const userRoute = require("./routes/users.routes");
 app.use("/api", userRoute);
@@ -54,7 +55,7 @@ const port = 5000;
 
 // Conectting port
 const server = app.listen(port, () => {
-  console.log("Port connected to: ", port);
+  console.log("Port connected to: http://localhost:"+port);
 });
 
 // Find 404 and hand over to error handler
