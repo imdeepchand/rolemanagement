@@ -1,5 +1,6 @@
 const Bcrypt = require("bcryptjs");
 const userSchema = require("../models/users.model");
+const LoginSchema = require("../models/Login.model");
 const jwt = require("jsonwebtoken");
 const {
   RFC,
@@ -20,6 +21,13 @@ exports.Login = async (req, res) => {
   } else {
     const cmp = await Bcrypt.compare(req.body.password, user[0].password);
     if (cmp) {
+      var today = new Date();
+      var time = today.toISOString("en-IN");
+      await LoginSchema.create({
+        email: data.user[0].email,
+        role: data.user[0].role,
+        login_time: time,
+      });
       res.status(RFC.H200).json({ data: data, msg: LOGIN_SUCCESS });
     } else {
       res.status(RFC.H401).json({ msg: INVALID_USER });

@@ -4,6 +4,8 @@ exports.RFC = {
   H200: 200,
   // Created
   H201: 201,
+  //no content
+  H204: 204,
   // Not Found
   H302: 302,
   //Unauthorize

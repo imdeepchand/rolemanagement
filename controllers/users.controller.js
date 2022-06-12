@@ -9,15 +9,18 @@ const {
   DELETE_DATA,
   ALREADY,
 } = require("../frozen/msgAndStatusCode");
-exports.findAll = (req, res) => {
+exports.findAll = async(req, res) => {
   const where = { role: Freeze.USER };
-  userSchema.find(where, (error, data) => {
-    if (error) {
-      return next(error);
-    } else {
-      res.status(RFC.H302).json({ data: data, msg: DATA_FOUND });
-    }
-  });
+  const Response = await userSchema.find(where);
+  var data = {}
+  data = Response.map(elm => {
+    return {
+      name: elm.name,
+      email: elm.email,
+      role: elm.role
+    }    
+  })
+  res.status(RFC.H302).json({ data: data, msg: DATA_FOUND });
 };
 
 exports.createOne = async (req, res, next) => {
